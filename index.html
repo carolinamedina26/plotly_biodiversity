@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+  .container h1, p, h5{
+      color:white;
+  }
+  .panel {
+    background-image: none;
+    background-color: white;
+    color: black;
+}
+</style>
+<body style="background-color:rgb(0, 0, 0);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(https://news.yale.edu/sites/default/files/styles/horizontal_image/public/d6_files/iStock_000012147606Small.jpg?itok=NGDVTkFv); background-size: 100%; height: 100%;">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <p>Labs continue to research and synthesize meat from algae, fungi, and microorganisms found on plant roots. 
+        We have partnered with Improbable Beef, a food startup to research candidate species for the elusive bacteria that will provide the 
+        perfect taste. The next best taste lies within the human body. The human body is a source of thousands of types of bacteria, and 
+        different parts of the body harbor different species. The ideal bacterial species to make synthetic beef may be found in the belly button. 
+        The data below show the findings of bacterial species that colonize in our belly buttons.</p>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well" style="background-color:rgb(255, 145, 0);">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-2">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+</body>
+</html>
